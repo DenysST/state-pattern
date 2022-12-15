@@ -4,11 +4,12 @@ import com.company.states.OrderedState;
 import com.company.states.State;
 
 public class Product {
-    private String name;
-    private State state = new OrderedState();
+    private final String name;
+    private State state;
 
     public Product(String name) {
         this.name = name;
+        this.state = new OrderedState();
     }
 
     public State getState() {
